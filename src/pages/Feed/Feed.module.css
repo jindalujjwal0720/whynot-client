@@ -1,0 +1,12 @@
+.feedPage {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 660px;
+}

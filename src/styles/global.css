@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+button,
+select {
+  outline: none;
+  border: none;
+}
+
+body {
+  background-color: var(--color-background-light);
+  color: var(--color-text);
+}
+
+img,
+button {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--color-background-light);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-scrollbar);
+  border-radius: 4px;
+  cursor: pointer;
+} */

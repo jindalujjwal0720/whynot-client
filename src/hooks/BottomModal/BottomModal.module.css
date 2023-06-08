@@ -1,0 +1,112 @@
+.wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 10px;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 95%;
+  max-height: 700px;
+  background-color: var(--color-background);
+  border-radius: 20px 20px 0 0;
+  padding: 16px;
+  overflow: hidden;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  max-height: 100%;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 16px;
+  background-color: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+body:has(.modal) {
+  overflow: hidden;
+}
+
+.openWrapper {
+  animation: open-wrapper 0.3s ease-in-out;
+}
+
+.openModal {
+  animation: open-modal 0.3s ease-in-out;
+}
+
+.closeWrapper {
+  animation: wrapper-close 0.3s ease-in-out;
+}
+
+.closeModal {
+  animation: modal-close 0.3s ease-in-out;
+}
+
+@keyframes open-wrapper {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes open-modal {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes wrapper-close {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes modal-close {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
